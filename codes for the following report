@@ -1,0 +1,24 @@
+data()
+print(esoph)
+
+df=as.data.frame(esoph)
+nrow(df)
+
+barplot(table(esoph$tobgp,esoph$alcgp),beside = TRUE,legend = rownames(table))
+
+prop.table(table(esoph$tobgp,esoph$alcgp),margin = 2)
+
+head(esoph)
+
+tail(esoph)
+
+table(esoph$tobgp,esoph$alcgp)
+
+df=as.data.frame(esoph)
+ncol(df)
+
+mosaicplot(table(esoph$tobgp, esoph$alcgp), main = "Mosaic Plot")
+
+chisq.test(esoph$tobgp, esoph$alcgp)
+
+xtabs(~ tobgp + alcgp, data = esoph)
